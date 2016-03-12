@@ -3,14 +3,12 @@
 - OpenMP Unterstützung
 - GnuPlot (Header sind in Programm-Ordner enthalten)
 
-Installation: Object Files und Executables sind mit dem MAKEFILE zu generieren.
-
 
 Kurze Beschreibung:
 
 Dieses Programm dient als kleine Demo einer simplen Fluidsimulation. Hierzu wird eine Fluidbox mit beliebig zu wählenden Randbedinungen betrachtet (in diesem Fall wurden 3 Jets, die aus dem unteren Rand der Box strömen, implementiert). Mit dem Starten des Programms kann an einer beliebigen Stelle der Box mit einem Mausklick ein rundes Hindernis für die Strömung eingebracht werden. Dieses interagiert bidirektional mit der Strömung (-> Objekt beeinflusst Strömung und Strömung beeinflusst die Bewegung des Objekts). Zusätzlich steht es unter dem Einfluss der Schwerkraft.
 
-Es wurden stark vereinfachte Navier-Stokes Gleichungen für die Simulation der Fluidmechanik verwendet. Es handelt sich um einen sehr einfachen Solver, wie er bspw. in Computerspielen implementiert werden kann, wo primär der Fokus auf ansprechender und fluid-ähnlicher Optik und weniger auf einer exakter Lösung der Gleichungen liegt. 
+Es wurden stark vereinfachte Navier-Stokes Gleichungen für die Simulation der Fluidmechanik verwendet. Es handelt sich um einen sehr einfachen Solver, wie er bspw. in Computerspielen implementiert werden kann, wo primär der Fokus auf ansprechender und fluid-ähnlicher Optik und weniger auf einer exakter Lösung der Gleichungen liegt.
 
 In der header-Datei lassen sich Simulationsparameter wie: Zeitschrittgröße und Größe der Simulationsbox, sowie Fluid-Parameter wie Viskosität und Diffusivität frei einstellen.
 
@@ -25,3 +23,14 @@ Das Programm besteht aus 6 Dateien:
 - fluidFuncs.cpp: Enthält die für die Fluidmechanik benötigten Algorithmen
 - Obstacle.cpp,Obstacle.h: Header und Klassenkörper der Klasse Obstacle. Gemäß eines OO-Ansatzes wurde das sich bewegende Objekt im Fluid als Instanz einer Klasse Obstacle implementiert
 - defines.h: Header des kompletten Programms mit Funktion-Deklarationen, Makro-Definition, Einstellen der Simulationsparameter und setzen globaler Variablen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+To compile and run the programm you will need:
+- OpenMP support
+- GnuPlot (header file is included in source)
+
+Short description:
+This program serves as a small demo of a simple fluid simulation.
+Heavily simplified Navier Stokes equations were used to model the fluid behavior.
+The header.h file contains simulation parameters such as time step size or fluid viscosity.
